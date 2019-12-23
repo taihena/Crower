@@ -1,7 +1,7 @@
 import os
 import tweepy
 
-print("bot has started")
+print("bot started")
 
 CONSUMER_KEY = os.environ["CROWER_CONSUMER_KEY"]
 CONSUMER_SECRET = os.environ["CROWER_CONSUMER_SECRET"]
@@ -13,8 +13,6 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
 
-def publish_tweet(text):
-    api.update_status(text)
+def publish(tweet):
+    api.update_status(tweet)
 
-
-publish_tweet("test")
